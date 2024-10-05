@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "./components/Buttons/button";
+import { ComplexNavbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
-      <div className="bg-background text-foreground text-8xl ">
-        hrllo
-        <Button>Hello Akhil</Button>
-      </div>
+      <ComplexNavbar/>
+      {/* <Button>Hello Akhil</Button> */}
     </>
   );
 }
