@@ -119,7 +119,7 @@ export const SignIn = () => {
           </form>
           <div className="mt-4 text-center text-sm">
             Don&apos;t have an account?{" "}
-            <a href="/auth/signup" className="underline text-blue-600 hover:text-blue-800">
+            <a href="/signup" className="underline text-blue-600 hover:text-blue-800">
               Sign up
             </a>
           </div>
