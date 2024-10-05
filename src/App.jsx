@@ -1,11 +1,12 @@
-import { Button } from "./components/Buttons/button";
+import AppRoutes from "./AppRoute";
+import { Button } from "./components/ui/button";
 import { ComplexNavbar } from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <>
       <ComplexNavbar/>
-      {/* <Button>Hello Akhil</Button> */}
+      <AppRoutes/>
     </>
   );
 }
