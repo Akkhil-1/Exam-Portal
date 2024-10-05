@@ -1,21 +1,21 @@
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { useState } from 'react';
+import { useState } from "react";
 
 export const SignUp = () => {
   const currentDate = new Date();
 
   // Format the date, time, and day
-  const day = currentDate.toLocaleString('en-US', { weekday: 'long' });
+  const day = currentDate.toLocaleString("en-US", { weekday: "long" });
   const time = currentDate.toLocaleTimeString();
   const date = currentDate.toLocaleDateString();
 
@@ -32,10 +32,12 @@ export const SignUp = () => {
   };
 
   return (
-    <div className='flex items-center justify-center min-h-screen'>
+    <div className="flex items-center justify-center min-h-screen">
       <Card className="mx-auto max-w-sm shadow-lg transition-transform transform hover:scale-105">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-gray-800">Sign Up</CardTitle>
+          <CardTitle className="text-2xl font-bold text-gray-800">
+            Sign Up
+          </CardTitle>
           <CardDescription className="text-gray-600">
             Enter your information to create an account
           </CardDescription>
@@ -73,38 +75,46 @@ export const SignUp = () => {
               <Label className="text-lg font-semibold">Select your Role</Label>
               <div className="flex items-center space-x-4">
                 <div className="flex items-center">
-                  <input 
-                    type="radio" 
-                    id="user" 
-                    name="role" 
-                    value="user" 
-                    checked={role === "user"} 
-                    onChange={() => setRole("user")} 
+                  <input
+                    type="radio"
+                    id="user"
+                    name="role"
+                    value="user"
+                    checked={role === "user"}
+                    onChange={() => setRole("user")}
                     className="hidden peer"
                   />
-                  <Label 
-                    htmlFor="user" 
+                  <Label
+                    htmlFor="user"
                     className={`py-2 px-4 rounded-md cursor-pointer transition-all duration-200 
-                      ${role === "user" ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}
+                      ${
+                        role === "user"
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-200 text-gray-700"
+                      }
                       peer-checked:bg-blue-500 peer-checked:text-white`}
                   >
                     User
                   </Label>
                 </div>
                 <div className="flex items-center">
-                  <input 
-                    type="radio" 
-                    id="admin" 
-                    name="role" 
-                    value="admin" 
-                    checked={role === "admin"} 
-                    onChange={() => setRole("admin")} 
+                  <input
+                    type="radio"
+                    id="admin"
+                    name="role"
+                    value="admin"
+                    checked={role === "admin"}
+                    onChange={() => setRole("admin")}
                     className="hidden peer"
                   />
-                  <Label 
-                    htmlFor="admin" 
+                  <Label
+                    htmlFor="admin"
                     className={`py-2 px-4 rounded-md cursor-pointer transition-all duration-200 
-                      ${role === "admin" ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-700'}
+                      ${
+                        role === "admin"
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-200 text-gray-700"
+                      }
                       peer-checked:bg-blue-500 peer-checked:text-white`}
                   >
                     Admin
@@ -112,22 +122,30 @@ export const SignUp = () => {
                 </div>
               </div>
               <p className="text-sm text-gray-500 mt-1">
-                Choose 'User' for standard access or 'Admin' for administrative privileges.
+                Choose 'User' for standard access or 'Admin' for administrative
+                privileges.
               </p>
             </div>
-            <Button onClick={()=>{
-              toast({
-                variant: "Success",
-                title: "Created Account Successfully",
-                description: `Role: ${role}, Date: ${date}, Time: ${time}, Day: ${day}`,
-              });
-            }} type="submit" className="w-full bg-blue-600 hover:bg-blue-700 transition-all duration-200">
+            <Button
+              onClick={() => {
+                toast({
+                  variant: "Success",
+                  title: "Created Account Successfully",
+                  description: `Role: ${role}, Date: ${date}, Time: ${time}, Day: ${day}`,
+                });
+              }}
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-700 transition-all duration-200"
+            >
               Create an account
             </Button>
           </form>
           <div className="mt-4 text-center text-sm">
-            Already have an account?{' '}
-            <a href="/signin" className="underline text-blue-600 hover:text-blue-800">
+            Already have an account?{" "}
+            <a
+              href="/signin"
+              className="underline text-blue-600 hover:text-blue-800"
+            >
               Sign in
             </a>
           </div>
@@ -135,6 +153,6 @@ export const SignUp = () => {
       </Card>
     </div>
   );
-}
+};
 
 export default SignUp;

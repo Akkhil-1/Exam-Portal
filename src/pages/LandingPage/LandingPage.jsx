@@ -1,10 +1,12 @@
-import React from 'react';
-import { NavbarWithMegaMenu } from './components/Header';
-
+import React from "react";
+import { NavbarWithMegaMenu } from "./components/Header";
+import { FooterWithLogo } from "./components/Footer";
 function LandingPage() {
-  return (
-    <NavbarWithMegaMenu/>
-  );
+  return(
+    <div>
+      <NavbarWithMegaMenu/>
+      <FooterWithLogo/>
+    </div>
+  )
 }
-
 export default LandingPage;
